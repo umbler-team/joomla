@@ -1,0 +1,23 @@
+name: joomla
+author: Umbler
+logo_url: https://design.umbler.com//assets/svg/sprite-logos.svg#joomla
+version: 1.0
+description: ""
+short_description: ""
+stack: php
+pack: "**/*.*"
+dest: /public
+
+env:
+  DB_NAME: "{database_mysql_name}" 
+  DB_USER: "{database_mysql_user}"
+  DB_PASSWORD: "{database_mysql_password}"
+  DB_HOST: "{database_mysql_host}"
+  php_extensions: "gd mysql mysqli opcache pdo_mysql soap"
+  
+requires:
+  web: 
+    quantity: 1
+    size: 1
+  database:
+    - type: mysql
