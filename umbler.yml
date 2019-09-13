@@ -2,8 +2,8 @@ name: joomla
 author: Umbler
 logo_url: https://design.umbler.com//assets/svg/sprite-logos.svg#joomla
 version: 1.0
-description: ""
-short_description: ""
+description: "Joomla! is an award-winning content management system (CMS), which enables you to build Web sites and powerful online applications. Many aspects, including its ease-of-use and extensibility, have made Joomla! the most popular Web site software available. Best of all, Joomla! is an open source solution that is freely available to everyone, this also means that you can modify the source code according to your needs and gain maximum advantage."
+short_description: "Joomla! is a CMS which enables you to build websites and powerful online applications."
 stack: php
 pack: "**/*.*"
 dest: /public
