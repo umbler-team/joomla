@@ -14,7 +14,13 @@ env:
   DB_PASSWORD: "{database_mysql_password}"
   DB_HOST: "{database_mysql_host}"
   php_extensions: "gd mysql mysqli opcache pdo_mysql soap"
-  
+
+build_pipeline:
+  - sed -i "s/localhost/$DB_HOST/g" installation/model/forms/database.xml
+  - sed -i "s/name=\"db_user\"/name=\"db_user\" \n\t default=\"$DB_USER\" /g" installation/model/forms/database.xml
+  - sed -i "s/name=\"db_pass\"/name=\"db_pass\" \n\t default=\"$DB_PASSWORD\" /g" installation/model/forms/database.xml
+  - sed -i "s/name=\"db_name\"/name=\"db_name\" \n\t default=\"$DB_NAME\" /g" installation/model/forms/database.xml
+
 requires:
   web: 
     quantity: 1
